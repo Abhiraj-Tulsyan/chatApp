@@ -1,0 +1,25 @@
+<div ng-controller='RoomController'>
+
+<div class="sidenav">
+        <h1 style='padding-left: 3% ; color: white'>ONLINE</h1>
+      <li ng-repeat='user in userId'> {{user.userId}}  <span ng-if='user.typing' style='font-size:50%' >  typ..</span></li>
+</div> 
+
+
+
+<div class='main'>
+     <div style=' height:20em  ; overflow: auto' >
+       <h1 style='text-align: center'>Room connected:{{roomname}}</h1>
+        <h2 style='text-align: center' id='start' > you are {{currentUser}}</h2>
+<h3  ></h3>
+</div>
+
+
+<div style='position:fixed; bottom: 3%;width:90%'  >
+     
+        <input type="text" style="width:90%" ng-model='messageValue' ng-change='userTyping()' > 
+        
+<button class='btn btn-info '  ng-click='messageSend()'> Send</button>
+</div>
+</div>
+</div>
